@@ -8,10 +8,14 @@ function App() {
         <div className='display' id='display'>
           <p className='display-result'>0</p>
         </div>
+        <div className='underline'></div>
         <div className='calc-container'>
           {data.map((item) => {
             return (
-              <button className='calc-btn' id={item.name}>
+              <button
+                className={`calc-btn ${item.type === 'number' ? 'number' : ''}`}
+                id={item.name}
+              >
                 {item.symbol}
               </button>
             )

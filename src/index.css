@@ -1,13 +1,89 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  --myPrim: #3da5d9;
+  --mySec: #f4edea;
+  --myMargin: 1.2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--myPrim);
+}
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: var(--myMargin);
+  background-color: var(--mySec);
+  border-radius: var(--myMargin);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.display {
+  font-size: 3.5rem;
+  text-align: end;
+  background-color: rgb(15, 61, 87);
+  color: var(--mySec);
+  border-top-left-radius: var(--myMargin);
+  border-top-right-radius: var(--myMargin);
+  width: 350px;
+}
+.display-result {
+  display: block;
+  margin-right: var(--myMargin);
+}
+.underline {
+  height: 1px;
+  width: 100%;
+  /* background-color: #0f3d57; */
+  margin-top: var(--myMargin);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(15, 61, 87, 0.4);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(15, 61, 87, 0.4);
+  box-shadow: 0px 1px 1px 0px rgba(15, 61, 87, 0.4);
+}
+.calc-container {
+  margin: var(--myMargin) auto;
+  /* overflow: hidden; */
+  width: 350px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* grid-area: 'c divide multiply sustract' 'seven eight nine add'
+    'four five six add' 'one two three equals' 'zero zero decimal equals'; */
+  gap: 0.6rem;
+}
+#add {
+  grid-area: 2/4/4/5;
+}
+#equals {
+  grid-area: 4/4/6/5;
+}
+#zero {
+  grid-area: 5/1/6/3;
+}
+.calc-btn {
+  border: none;
+  background-color: #3d3d3d;
+  font-size: 1.4rem;
+  color: var(--mySec);
+  border-radius: var(--myMargin);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.number {
+  background-color: #bdbdbd;
+  color: black;
+}
+.calc-btn:hover {
+  box-shadow: none;
 }
