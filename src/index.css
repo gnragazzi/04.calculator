@@ -80,10 +80,15 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.number {
+.number,
+.decimal {
   background-color: #bdbdbd;
   color: black;
 }
 .calc-btn:hover {
   box-shadow: none;
+}
+.active {
+  box-shadow: none;
+  background-color: coral;
 }

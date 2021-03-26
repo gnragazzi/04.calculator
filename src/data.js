@@ -2,26 +2,32 @@ export default [
   {
     name: 'clear',
     symbol: 'C',
+    type: 'clear',
   },
   {
     name: 'divide',
     symbol: '/',
+    type: 'operator',
   },
   {
     name: 'multiply',
     symbol: '*',
+    type: 'operator',
   },
   {
     name: 'add',
     symbol: '+',
+    type: 'operator',
   },
   {
     name: 'subtract',
     symbol: '-',
+    type: 'operator',
   },
   {
     name: 'equals',
     symbol: '=',
+    type: 'equals',
   },
   {
     name: 'seven',
@@ -76,6 +82,6 @@ export default [
   {
     name: 'decimal',
     symbol: '.',
-    type: 'number',
+    type: 'decimal',
   },
 ]
